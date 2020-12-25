@@ -5,8 +5,9 @@ and that you are given teh 'true' length of the string.
 '''
 
 def URLify(string):
-    
-
+    string = string.strip()
+    string = string.replace(" ", "%20")
+    return string
 
 s = "Mr John Smith    " # "Mr%20John%20Smith"
 print(URLify(s))
