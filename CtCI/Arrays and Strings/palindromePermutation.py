@@ -16,8 +16,17 @@ def palindromePermutation(string):
         else:
             char[val] = 1
     
-    for 
+    for i, j in char.items():
+        if j % 2 != 0 and count == 0:
+            count += 1
+        elif j % 2 != 0 and count != 0:
+            return False
+    
+    return True
 
 
-n = "Tact Coa"
+n = "Tact Coa" # True
+n1 = "Croatoan" # False
+
 print(palindromePermutation(n))
+print(palindromePermutation(n1))
